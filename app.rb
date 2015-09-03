@@ -4,16 +4,16 @@ require 'pry'
 
 require_relative './views/basic_calc'
 
+
 get '/' do 
   @title = 'HOME'
   erb :home
 end
 
-
-post '/calculate' do
-  @basic_calc = Basic_Calc.work params[:word]
-  erb :home
-end
+# post '/calculate' do
+#   @basic_calc = Basic_Calc.work params[:word]
+#   erb :home
+# end
 
 post '/calculate' do
   @basic_calc = Basic_Calc.work params[:word]

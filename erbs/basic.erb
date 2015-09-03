@@ -1,9 +1,6 @@
 <h1><%= @title %></h1>
 
  <!-- The Calculate funciton -->
-<% if @error %>
-  <h2><%= @error %></h2>
-<% end %>
 
 <form action="/calculate" method="post">
   <input type="text" name="word" autofocus>
