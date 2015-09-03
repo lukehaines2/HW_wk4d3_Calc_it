@@ -9,6 +9,18 @@ get '/' do
   erb :home
 end
 
+
+post '/calculate' do
+  @basic_calc = Basic_Calc.work params[:word]
+  erb :home
+end
+
+post '/calculate' do
+  @basic_calc = Basic_Calc.work params[:word]
+  erb :home
+end
+
+
 post '/navigate' do
   case params[:destination].downcase
   when 'Basic Calc' then redirect to '/basic'

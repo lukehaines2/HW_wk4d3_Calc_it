@@ -1,12 +1,15 @@
 <h1><%= @title %></h1>
 
-<% if @error %>
-  <h2><%= @error %></h2> <!-- if theres an error, print the error -->
+
+<!-- The navigate funciton -->
+  <% if @error %>
+  <h2><%= @error %></h2>
 <% end %>
 
-<form action="/translate" method="post">
+<form action="/navigate" method="post">
   <input type="text" name="word" autofocus>
-  <button>Translate</button>
+  <button>Navigate</button>
 </form>
 
-  <p> <%= @translation %> </p>
+  <p> <%= @navigate %> </p>
+
